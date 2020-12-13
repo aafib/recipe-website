@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: siddiquiehtesham/tours-and-travels
+
+media_folder: static/img
+public_folder: img/
+
+collections:
+  - label: "Packages"
+    name: "package"
+    folder: "packages"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["tourist", "honeymoon", "industrial"],
+        }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Duration", name: "duration", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Description", name: "description", widget: "markdown" }
